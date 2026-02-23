@@ -1,0 +1,36 @@
+:root {
+  /* Tipografia */
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight: 400;
+
+  /* Cores padrão (modo escuro por default) */
+  --bg: #242424;
+  --text: rgba(255, 255, 255, 0.87);
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+}
+
+/* Aplicar cores ao documento */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Ajuste automático para preferências de tema claro */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --text: rgba(0, 0, 0, 0.87);
+  }
+}

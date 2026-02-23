@@ -1,0 +1,506 @@
+/* =====================================================
+   PORTFÓLIO MINIMALISTA MODERNO
+===================================================== */
+
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #262626;
+  --muted: #595961;
+  --accent: #0890c6;
+  --accent-soft: #eaf1ff;
+  --border: #d3d4d6;
+
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+  --max-width: 1100px;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* =====================================================
+   LAYOUT GERAL
+===================================================== */
+
+.portfolio {
+  width: 100%;
+}
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(248, 249, 252, 0.85);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+}
+
+.nav-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h3 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar nav a:hover {
+  color: var(--accent);
+}
+.greetings {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    display: inline-block;
+    margin-right: 0.6rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.greetings:hover h3{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
+}
+
+@media (max-width: 768px) {
+    .greetings {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.55rem;
+    }
+}
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  text-align: center;
+  padding-top: 6rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+
+    /* typing animation */
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.12em solid var(--text);
+    width: 0;
+    color: var(--accent);
+    /* digitação com pausa e apaga em loop */
+    animation: typing 6s steps(30,end) infinite alternate, blinkCaret .7s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blinkCaret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--text); }
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.hero h3 {
+  font-size: 1.1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+#about p {
+  max-width: 700px;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 2rem;
+}
+
+.tools:hover{
+    gap: 0.8rem;
+    transition: gap 0.2s ease;
+}
+
+.tool-badge {
+  background: var(--accent);
+  color: var(--surface);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tools a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.tools a:hover {
+  text-decoration: underline;
+}
+
+.about .grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.about .grid img {
+  width: 1fr;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+  
+}
+
+.about img {
+  border-radius: var(--radius);
+}
+
+.about img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.photo-wrap {
+  width: 400px;
+  height: 620px;
+  display: flex;
+  justify-content: left;
+}
+
+@media (max-width: 900px) {
+  .about .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about .grid img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* =====================================================
+   PROJETOS
+===================================================== */
+
+.filters {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.filters button {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filters button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* active state */
+.filters button.active,
+.filters .active {
+    background: var(--accent);
+    color: var(--surface);
+    border-color: var(--accent);
+}
+
+/* ensure active button does not change on hover */
+.filters button.active:hover {
+    background: var(--accent);
+    color: var(--surface);
+    border-color: var(--accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid var(--border);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h4 {
+  padding: 1rem 1rem 0.3rem;
+  font-size: 1rem;
+}
+
+.card span {
+  padding: 0 1rem 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: block;
+}
+button.close{
+    color: var(--muted);
+    background: none;
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+/* =====================================================
+   CONTATO
+===================================================== */
+.section.contact {
+    background: var(--text);
+    padding: 5rem 1.5rem;
+    text-align: center;
+    color: var(--text);
+    border-top: 1px solid var(--border);
+}
+
+.contact p {
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+}
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  z-index: 2000;
+}
+
+.modal {
+  background: white;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.2s ease;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--accent-soft);
+}
+
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: var(--accent-soft);
+  border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #0043a0;
+}
+
+.modal img {
+   max-width: 100%;
+   max-height: 600px;
+   width: 100%;
+   height: auto;
+   object-fit: contain;
+   margin-bottom: 20px;
+}
+
+
+.modal h3 {
+  margin-bottom: 0.5rem;
+}
+
+.modal p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.modal a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* =====================================================
+   SCROLL BUTTON
+===================================================== */
+
+.scroll-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 768px) {
+  .navbar nav {
+    display: none;
+  }
+
+  .section {
+    padding: 4rem 1.2rem;
+  }
+
+  .hero {
+    padding-top: 4rem;
+  }
+}
