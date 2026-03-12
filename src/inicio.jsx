@@ -53,7 +53,7 @@ const DATA = {
         category: "UI Design",
         title: "Certin - Aplicativo de Gestão Acadêmica",
         thumb: "certinthumb.png",
-        full: "certinplaceholder.png",
+        full: "certinthumb.png",
         description: "Construção de identidade visual, interface e prototipação de telas para um aplicativo de gestão acadêmica.",
         toolsUsed: ["CorelDraw", "Ilustrator", "Figma", "Vite"],
         link: "https://front-end-certin-app.vercel.app"
@@ -72,7 +72,7 @@ const DATA = {
         id: 3,
         category: "Identidade Visual",
         title: "Processo Criativo de um cérebro Caótico - Identidade Visual",
-        thumb: "portfoliothumb.png",
+        thumb: "portfolioplaceholder.png",
         full: "portfolioplaceholder.png",
         description: "Identidade Visual para uma loja de Roupas Nordestina, com o foco em transmitir a energia e a vibe das gerações passadas para o futuro.",
         toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],

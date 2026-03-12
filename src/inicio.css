@@ -7,10 +7,11 @@
   --surface: #ffffff;
   --text: #262626;
   --muted: #595961;
-  --accent: #0890c6;
+  --accent: #000000;
   --accent-soft: #eaf1ff;
   --border: #d3d4d6;
-
+  --confirm: #4caf50;
+  --error: #f44336;
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 
@@ -210,6 +211,7 @@ body {
 }
 
 .tools a:hover {
+  color: var(--confirm);
   text-decoration: underline;
 }
 
@@ -391,6 +393,7 @@ footer {
   align-items: center;
   padding: 1.5rem;
   z-index: 2000;
+  text-align: center;
 }
 
 .modal {
@@ -449,6 +452,16 @@ footer {
   color: var(--accent);
   font-weight: 600;
   text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  margin-top: 0.9rem;
+  display: inline-block;
+}
+
+.modal a:hover {
+  color: var(--confirm);
+  text-decoration: underline;
 }
 
 .close {
@@ -459,6 +472,12 @@ footer {
   border: none;
   font-size: 1.4rem;
   cursor: pointer;
+}
+
+.close:hover {
+  color: var(--error);
+   background: none;
+  border: none;
 }
 
 /* =====================================================
@@ -476,6 +495,11 @@ footer {
   border-radius: 50%;
   cursor: pointer;
   box-shadow: var(--shadow);
+}
+
+.scroll-top:hover {
+  background: var(--confirm);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* =====================================================
