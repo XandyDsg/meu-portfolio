@@ -7,9 +7,9 @@ import "./inicio.css";
 
 const DATA = {
   hero: {
-     title: "Portfólio 2026 - Alexandre Ferreira",
-     subtitle: "Acredito no Design como algo além do produto. Acredito no Design como atitude.",
-     mencao: "Alice Rawsthorn - Design como Atitude"
+     title: "Portfólio - Alexandre Ferreira",
+     subtitle: "Somos todos pequenos pedaços de várias pessoas.",
+     mencao: "Austin Kleon - Roube como um Artista"
 },
 
   about: {
