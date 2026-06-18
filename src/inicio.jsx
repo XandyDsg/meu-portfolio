@@ -77,7 +77,16 @@ const DATA = {
         description: "Identidade Visual para uma loja de Roupas Nordestina, com o foco em transmitir a energia e a vibe das gerações passadas para o futuro.",
         toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
         link: "https://www.behance.net/gallery/244644697/Capa-Poster-Identidade-Visual-de-portfolio"
-     }
+     },
+       {
+      id: 4,
+        category: "Identidade Visual",
+        title: "Dadudim - Doceria Artesanal",
+        thumb: "dadudimthumb.png",
+        full: "dadudimthumb.png",
+        description: "Construção de identidade visual, com dois mascotes ilustrados.",
+        toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
+        link: "https://www.behance.net/gallery/251349109/DADUDIM-DOCERIA?platform=direct"}
   ],
 
   contact: {
