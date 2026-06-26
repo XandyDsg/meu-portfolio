@@ -190,7 +190,7 @@ body {
 }
 
 .tool-badge {
-  background: var(--accent);
+  background: var(--confirm);
   color: var(--surface);
   padding: 0.5rem 0.9rem;
   border-radius: 999px;
@@ -283,21 +283,44 @@ body {
 }
 
 .filters button:hover {
-    border-color: var(--accent);
+    border-color: var(--confirm);
     color: var(--accent);
 }
 
 /* active state */
 .filters button.active,
 .filters .active {
-    background: var(--accent);
+    background: var(--confirm);
     color: var(--surface);
     border-color: var(--accent);
 }
 
 /* ensure active button does not change on hover */
 .filters button.active:hover {
-    background: var(--accent);
+    background: var(--confirm);
+    color: var(--surface);
+    border-color: var(--accent);
+}
+.sort-actions button {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.sort-actions button:hover {
+    border-color: var(--confirm);
+    color: var(--accent);
+}
+.sort-actions button.active{
+    background: var(--confirm);
     color: var(--surface);
     border-color: var(--accent);
 }

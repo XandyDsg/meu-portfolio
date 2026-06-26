@@ -114,6 +114,7 @@ const DATA = {
 export default function Inicio() {
   const [filter, setFilter] = useState("Todos");
   const [selectedProject, setSelectedProject] = useState(null);
+  const [sortAlphabetical, setSortAlphabetical] = useState(false);
 
   // ROTATE NAVBAR GREETING
   const [greetIndex, setGreetIndex] = useState(0);
@@ -131,9 +132,21 @@ export default function Inicio() {
   }, []);
 
   const visibleProjects = useMemo(() => {
-     if (filter === "Todos") return DATA.projects;
-     return DATA.projects.filter(p => p.category === filter);
-  }, [filter]);
+     const filtered = filter === "Todos"
+        ? DATA.projects
+        : DATA.projects.filter(p => p.category === filter);
+
+     if (!sortAlphabetical) return filtered;
+
+     return [...filtered].sort((a, b) => {
+        const aFirst = (a.title?.charAt(0) ?? "").toLowerCase();
+        const bFirst = (b.title?.charAt(0) ?? "").toLowerCase();
+        const compareFirst = aFirst.localeCompare(bFirst, "pt", { sensitivity: "base" });
+        return compareFirst !== 0
+           ? compareFirst
+           : a.title.localeCompare(b.title, "pt", { sensitivity: "base" });
+     });
+  }, [filter, sortAlphabetical]);
 
   return (
      <div className="portfolio">
@@ -207,16 +220,37 @@ export default function Inicio() {
           <section id="projects" className="section">
              <h2>Projetos</h2>
 
-             <div className="filters">
-                {categories.map(cat => (
-                  <button
-                     key={cat}
-                     className={filter === cat ? "active" : ""}
-                     onClick={() => setFilter(cat)}
-                  >
-                     {cat}
-                  </button>
-                ))}
+             <div
+                className="filters-row"
+                style={{
+                   display: "flex",
+                   justifyContent: "space-between",
+                   alignItems: "center",
+                   gap: "1rem",
+                   flexWrap: "wrap"
+                }}
+             >
+                <div className="filters">
+                   {categories.map(cat => (
+                     <button
+                        key={cat}
+                        className={filter === cat ? "active" : ""}
+                        onClick={() => setFilter(cat)}
+                     >
+                        {cat}
+                     </button>
+                   ))}
+                </div>
+
+                <div className="sort-actions">
+                   <button
+                      className={sortAlphabetical ? "active" : ""}
+                      onClick={() => setSortAlphabetical(prev => !prev)}
+                   >
+                      <span aria-hidden="true" className="sort-icon">⇄</span>
+                      {sortAlphabetical ? "Remover ordenação" : "Ordenar A-Z"}
+                   </button>
+                </div>
              </div>
 
              <div className="grid">
