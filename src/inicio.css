@@ -185,17 +185,22 @@ body {
 }
 
 .tools:hover{
+
     gap: 0.8rem;
     transition: gap 0.2s ease;
 }
 
 .tool-badge {
-  background: var(--confirm);
+  background: var(--accent);
   color: var(--surface);
   padding: 0.5rem 0.9rem;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 600;
+}
+.tool-badge:hover {
+    background: var(--confirm);
+    transition: background 0.2s ease;
 }
 
 .socials {
@@ -292,14 +297,14 @@ body {
 .filters .active {
     background: var(--confirm);
     color: var(--surface);
-    border-color: var(--accent);
+    border-color: var(--confirm);
 }
 
 /* ensure active button does not change on hover */
 .filters button.active:hover {
     background: var(--confirm);
     color: var(--surface);
-    border-color: var(--accent);
+    border-color: var(--confirm);
 }
 .sort-actions button {
     background: var(--surface);
@@ -322,7 +327,7 @@ body {
 .sort-actions button.active{
     background: var(--confirm);
     color: var(--surface);
-    border-color: var(--accent);
+    border-color: var(--confirm);
 }
 
 .grid {
