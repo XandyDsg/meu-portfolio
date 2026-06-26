@@ -13,11 +13,11 @@ const DATA = {
 },
 
   about: {
-     name: "Alexandre Ferreira",
+     name: "Alexandre Ferreira de Oliveira",
      bio: "Sou graduando de Design Digital pela Universidade Federal do Ceará, onde desenvolvi capacidades de atuar para álem das áreas de desenvolvimento gráfico, como o desenvolvimento de projetos visuais também para o mundo digital. Acredito no papel social do Designer e busco atuar em diferentes frentes desde projetos de impactos ambientais até a construção de projetos para o combate de desigualdades sociais.",
      education: [
         "Ensino Técnico em Informática — 2018 - 2021",
-        "Graduação em Design Digital — Cursando o 7º semestre"
+        "Graduação em Design Digital — Cursando o 8º semestre"
      ],
      navbarname: ["Seja bem-vindo!", "Seja bem-vinda!", "Seja bem-vinde!"]
   },
@@ -25,7 +25,8 @@ const DATA = {
   socials: [
      { name: "LinkedIn", url: "https://www.linkedin.com/in/alexandreferreiradesigner" },
      { name: "Instagram", url: "https://www.instagram.com/manda_dsg" },
-     { name: "GitHub", url: "https://github.com/XandyDsg" }
+     { name: "GitHub", url: "https://github.com/XandyDsg" },
+     { name: "Behance", url: "https://www.behance.net/alexandferreir155" }
   ],
 
   tools: [
@@ -86,7 +87,17 @@ const DATA = {
         full: "dadudimthumb.png",
         description: "Construção de identidade visual, com dois mascotes ilustrados.",
         toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
-        link: "https://www.behance.net/gallery/251349109/DADUDIM-DOCERIA?platform=direct"}
+        link: "https://www.behance.net/gallery/251349109/DADUDIM-DOCERIA?platform=direct"
+      },
+       {
+      id: 5,
+        category: "Identidade Visual",
+        title: "Edjackson - Psicólogo",
+        thumb: "edjacksonthumb.png",
+        full: "edjacksonthumb.png",
+        description: "Identidade visual para um psicólogo, com o objetivo de transmitir confiança e profissionalismo.",
+        toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
+        link: "https://www.behance.net/gallery/251767961/Edjackson-Lima-Psicologo-Branding"}
   ],
 
   contact: {

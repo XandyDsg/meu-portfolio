@@ -10,7 +10,7 @@
   --accent: #000000;
   --accent-soft: #eaf1ff;
   --border: #d3d4d6;
-  --confirm: #4caf50;
+  --confirm: #104d12;
   --error: #f44336;
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
@@ -64,7 +64,7 @@ body {
   position: sticky;
   top: 0;
   backdrop-filter: blur(10px);
-  background: rgba(248, 249, 252, 0.85);
+  background: rgba(248, 252, 248, 0.85);
   border-bottom: 1px solid var(--border);
   z-index: 1000;
 }
