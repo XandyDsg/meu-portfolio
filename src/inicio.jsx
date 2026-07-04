@@ -100,7 +100,7 @@ const DATA = {
         link: "https://www.behance.net/gallery/251767961/Edjackson-Lima-Psicologo-Branding"}
         ,
        {
-      id: 5,
+      id: 6,
         category: "Identidade Visual",
         title: "Clika - Identidade Visual para uma empresa de fotografia",
         thumb: "clikathumb.png",
