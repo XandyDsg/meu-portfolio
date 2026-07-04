@@ -98,6 +98,16 @@ const DATA = {
         description: "Identidade visual para um psicólogo, com o objetivo de transmitir confiança e profissionalismo.",
         toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
         link: "https://www.behance.net/gallery/251767961/Edjackson-Lima-Psicologo-Branding"}
+        ,
+       {
+      id: 5,
+        category: "Identidade Visual",
+        title: "Clika - Identidade Visual para uma empresa de fotografia",
+        thumb: "clikathumb.png",
+        full: "clikathumb.png",
+        description: "Identidade visual para uma empresa de fotografia, com o objetivo de transmitir profissionalismo e criatividade.",
+        toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
+        link: "https://www.behance.net/gallery/252167207/Clika-identidade-Visual"}
   ],
 
   contact: {
