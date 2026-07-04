@@ -108,6 +108,26 @@ const DATA = {
         description: "Identidade visual para uma empresa de fotografia, com o objetivo de transmitir profissionalismo e criatividade.",
         toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
         link: "https://www.behance.net/gallery/252167207/Clika-identidade-Visual"}
+          ,
+       {
+      id: 7,
+        category: "Identidade Visual",
+        title: "Busque - Identidade Visual para um aplicativo de rota universitária",
+        thumb: "busquethumb.png",
+        full: "busquethumb.png",
+        description: "Identidade visual para um aplicativo de rota universitária, com o objetivo de transmitir profissionalismo e criatividade.",
+        toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
+        link: "https://www.behance.net/gallery/252191787/BUSQUE-Rota-Universitaria"}
+           ,
+       {
+      id: 8,
+        category: "Ilustração",
+        title: "Estampa para camiseta - Nordeste Cyberpunk",
+        thumb: "nordestethumb.png",
+        full: "nordestethumb.png",
+        description: "Estampa para camiseta - Nordeste Cyberpunk",
+        toolsUsed: ["CorelDraw", "Ilustrator"],
+        }
   ],
 
   contact: {
