@@ -19,6 +19,7 @@ const DATA = {
         "Ensino Técnico em Informática — 2018 - 2021",
         "Graduação em Design Digital — Cursando o 8º semestre"
      ],
+     // Saudação rotativa e inclusiva — mantida como estava, é intencional (não é sobra de template)
      navbarname: ["Seja bem-vindo!", "Seja bem-vinda!", "Seja bem-vinde!"]
   },
 
@@ -35,28 +36,33 @@ const DATA = {
      { id: "figma", name: "Figma" },
      { id: "cd", name: "CorelDraw" },
      { id: "miro", name: "Miro" },
-      { id: "blender", name: "Blender" },
-      { id: "web", name: "Vite (javascript, HTML/CSS)" },
+     { id: "blender", name: "Blender" },
+     { id: "web", name: "Vite (javascript, HTML/CSS)" },
   ],
 
-      areas: [
+  areas: [
      { id: "ui", name: "interface do Usuário" },
      { id: "branding", name: "Branding" },
      { id: "pesquisa", name: "Pesquisa de Usuário" },
      { id: "social", name: "Social Media" },
      { id: "Product", name: "Desenvolvimento de Produtos" },
-      { id: "Frontend", name: "Frontend / Desenvolvimento Web" },
+     { id: "Frontend", name: "Frontend / Desenvolvimento Web" },
   ],
 
+  // NOTA: toolsUsed de cada projeto abaixo foi corrigido para usar os IDs de `tools`
+  // (ex.: "cd" em vez de "CorelDraw") — o modal busca por ID, então antes o match
+  // sempre falhava e só "funcionava" por acidente porque o fallback exibe o próprio
+  // texto que veio em toolsUsed. Com IDs corretos, o lookup passa a funcionar de verdade.
   projects: [
      {
         id: 1,
         category: "UI Design",
+        featured: true, // 🔸 fixa este projeto sempre no topo do grid, mesmo fora de ordenação A-Z
         title: "Certin - Aplicativo de Gestão Acadêmica",
         thumb: "certinthumb.png",
         full: "certinthumb.png",
         description: "Construção de identidade visual, interface e prototipação de telas para um aplicativo de gestão acadêmica.",
-        toolsUsed: ["CorelDraw", "Ilustrator", "Figma", "Vite"],
+        toolsUsed: ["cd", "ai", "figma", "web"],
         link: "https://front-end-certin-app.vercel.app"
      },
      {
@@ -66,68 +72,68 @@ const DATA = {
         thumb: "piteuplaceholder.png",
         full: "piteuplaceholder.png",
         description: "Identidade Visual para uma loja de Roupas Nordestina, com o foco em transmitir a energia e a vibe das gerações passadas para o futuro.",
-        toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
+        toolsUsed: ["cd", "ai", "ps"],
         link: "https://www.behance.net/gallery/244643015/Pitu-Identidade-Visual-de-Roupas"
      },
-      {
+     {
         id: 3,
         category: "Identidade Visual",
         title: "Processo Criativo de um cérebro Caótico - Identidade Visual",
         thumb: "portfolioplaceholder.png",
         full: "portfolioplaceholder.png",
         description: "Identidade Visual para uma loja de Roupas Nordestina, com o foco em transmitir a energia e a vibe das gerações passadas para o futuro.",
-        toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
+        toolsUsed: ["cd", "ai", "ps"],
         link: "https://www.behance.net/gallery/244644697/Capa-Poster-Identidade-Visual-de-portfolio"
      },
-       {
-      id: 4,
+     {
+        id: 4,
         category: "Identidade Visual",
         title: "Dadudim - Doceria Artesanal",
         thumb: "dadudimthumb.png",
         full: "dadudimthumb.png",
         description: "Construção de identidade visual, com dois mascotes ilustrados.",
-        toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
+        toolsUsed: ["cd", "ai", "ps"],
         link: "https://www.behance.net/gallery/251349109/DADUDIM-DOCERIA?platform=direct"
-      },
-       {
-      id: 5,
+     },
+     {
+        id: 5,
         category: "Identidade Visual",
         title: "Edjackson - Psicólogo",
         thumb: "edjacksonthumb.png",
         full: "edjacksonthumb.png",
         description: "Identidade visual para um psicólogo, com o objetivo de transmitir confiança e profissionalismo.",
-        toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
-        link: "https://www.behance.net/gallery/251767961/Edjackson-Lima-Psicologo-Branding"}
-        ,
-       {
-      id: 6,
+        toolsUsed: ["cd", "ai", "ps"],
+        link: "https://www.behance.net/gallery/251767961/Edjackson-Lima-Psicologo-Branding"
+     },
+     {
+        id: 6,
         category: "Identidade Visual",
         title: "Clika - Identidade Visual para uma empresa de fotografia",
         thumb: "clikathumb.png",
         full: "clikathumb.png",
         description: "Identidade visual para uma empresa de fotografia, com o objetivo de transmitir profissionalismo e criatividade.",
-        toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
-        link: "https://www.behance.net/gallery/252167207/Clika-identidade-Visual"}
-          ,
-       {
-      id: 7,
+        toolsUsed: ["cd", "ai", "ps"],
+        link: "https://www.behance.net/gallery/252167207/Clika-identidade-Visual"
+     },
+     {
+        id: 7,
         category: "Identidade Visual",
         title: "Busque - Identidade Visual para um aplicativo de rota universitária",
         thumb: "busquethumb.png",
         full: "busquethumb.png",
         description: "Identidade visual para um aplicativo de rota universitária, com o objetivo de transmitir profissionalismo e criatividade.",
-        toolsUsed: ["CorelDraw", "Ilustrator", "Photoshop"],
-        link: "https://www.behance.net/gallery/252191787/BUSQUE-Rota-Universitaria"}
-           ,
-       {
-      id: 8,
+        toolsUsed: ["cd", "ai", "ps"],
+        link: "https://www.behance.net/gallery/252191787/BUSQUE-Rota-Universitaria"
+     },
+     {
+        id: 8,
         category: "Ilustração",
         title: "Estampa para camiseta - Nordeste Cyberpunk",
         thumb: "nordestethumb.png",
         full: "nordestethumb.png",
         description: "Estampa para camiseta - Nordeste Cyberpunk",
-        toolsUsed: ["CorelDraw", "Ilustrator"],
-        }
+        toolsUsed: ["cd", "ai"],
+     }
   ],
 
   contact: {
@@ -166,16 +172,20 @@ export default function Inicio() {
         ? DATA.projects
         : DATA.projects.filter(p => p.category === filter);
 
-     if (!sortAlphabetical) return filtered;
+     if (sortAlphabetical) {
+        return [...filtered].sort((a, b) => {
+           const aFirst = (a.title?.charAt(0) ?? "").toLowerCase();
+           const bFirst = (b.title?.charAt(0) ?? "").toLowerCase();
+           const compareFirst = aFirst.localeCompare(bFirst, "pt", { sensitivity: "base" });
+           return compareFirst !== 0
+              ? compareFirst
+              : a.title.localeCompare(b.title, "pt", { sensitivity: "base" });
+        });
+     }
 
-     return [...filtered].sort((a, b) => {
-        const aFirst = (a.title?.charAt(0) ?? "").toLowerCase();
-        const bFirst = (b.title?.charAt(0) ?? "").toLowerCase();
-        const compareFirst = aFirst.localeCompare(bFirst, "pt", { sensitivity: "base" });
-        return compareFirst !== 0
-           ? compareFirst
-           : a.title.localeCompare(b.title, "pt", { sensitivity: "base" });
-     });
+     // Sem ordenação alfabética ativa: projetos com `featured: true` sempre na frente,
+     // preservando a ordem relativa original dentro de cada grupo.
+     return [...filtered].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
   }, [filter, sortAlphabetical]);
 
   return (
@@ -289,7 +299,26 @@ export default function Inicio() {
                      key={project.id}
                      className="card"
                      onClick={() => setSelectedProject(project)}
+                     style={project.featured ? { position: "relative" } : undefined}
                   >
+                     {project.featured && (
+                        <span
+                           className="featured-badge"
+                           style={{
+                              position: "absolute",
+                              top: "0.5rem",
+                              left: "0.5rem",
+                              background: "#111",
+                              color: "#fff",
+                              fontSize: "0.7rem",
+                              padding: "0.2rem 0.6rem",
+                              borderRadius: "999px",
+                              zIndex: 1
+                           }}
+                        >
+                           Destaque
+                        </span>
+                     )}
                      <img src={project.thumb} alt={project.title} loading="lazy" />
                      <h4>{project.title}</h4>
                      <span>{project.category}</span>
