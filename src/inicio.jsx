@@ -14,7 +14,7 @@ const DATA = {
 
   about: {
      name: "Alexandre Ferreira de Oliveira",
-   bio: "Sou graduando de Design Digital pela Universidade Federal do Ceará, onde desenvolvi capacidades de atuar para álem das áreas de desenvolvimento gráfico, como o desenvolvimento de projetos visuais também para o mundo digital. Tenho experiência no desenvolvimento de UI, práticas de pesquisa e desenvolvimento de atividades em UX, além de desenvolvr plataformas e <b>projetos Web/mobile usando JavaScript + banco de dados</b>. Sou apaixonado por design, tecnologia e inovação, e estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente.",
+   bio: "Sou graduando de Design Digital pela Universidade Federal do Ceará, onde desenvolvi capacidades de atuar para álem das áreas de desenvolvimento gráfico, como o desenvolvimento de projetos visuais também para o mundo digital. Tenho experiência no desenvolvimento de UI, práticas de pesquisa e desenvolvimento de atividades em UX, além de desenvolver plataformas e projetos Web/mobile usando JavaScript + banco de dados. Sou apaixonado por design, tecnologia e inovação, e estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente.",
      education: [
         "Ensino Técnico em Informática — 2018 - 2021",
         "Graduação em Design Digital — Cursando o 8º semestre"
