@@ -14,7 +14,7 @@ const DATA = {
 
   about: {
      name: "Alexandre Ferreira de Oliveira",
-     bio: "Sou graduando de Design Digital pela Universidade Federal do Ceará, onde desenvolvi capacidades de atuar para álem das áreas de desenvolvimento gráfico, como o desenvolvimento de projetos visuais também para o mundo digital. Acredito no papel social do Designer e busco atuar em diferentes frentes desde projetos de impactos ambientais até a construção de projetos para o combate de desigualdades sociais.",
+   bio: "Sou graduando de Design Digital pela Universidade Federal do Ceará, onde desenvolvi capacidades de atuar para álem das áreas de desenvolvimento gráfico, como o desenvolvimento de projetos visuais também para o mundo digital. Tenho experiência no desenvolvimento de UI, práticas de pesquisa e desenvolvimento de atividades em UX, além de desenvolvr plataformas e <b>projetos Web/mobile usando JavaScript + banco de dados</b>. Sou apaixonado por design, tecnologia e inovação, e estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente.",
      education: [
         "Ensino Técnico em Informática — 2018 - 2021",
         "Graduação em Design Digital — Cursando o 8º semestre"
@@ -125,15 +125,7 @@ const DATA = {
         toolsUsed: ["cd", "ai", "ps"],
         link: "https://www.behance.net/gallery/252191787/BUSQUE-Rota-Universitaria"
      },
-     {
-        id: 8,
-        category: "Ilustração",
-        title: "Estampa para camiseta - Nordeste Cyberpunk",
-        thumb: "nordestethumb.png",
-        full: "nordestethumb.png",
-        description: "Estampa para camiseta - Nordeste Cyberpunk",
-        toolsUsed: ["cd", "ai"],
-     }
+
   ],
 
   contact: {

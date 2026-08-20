@@ -12,6 +12,8 @@
   --border: #d3d4d6;
   --confirm: #104d12;
   --error: #f44336;
+  --sparkle-primary: #000000;
+  --sparkle-secondary: #104d12;
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 
@@ -128,6 +130,59 @@ body {
 .hero {
   text-align: center;
   padding-top: 6rem;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Sparkles decorativos do hero */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 0.45rem;
+  height: 0.45rem;
+  pointer-events: none;
+  background: var(--sparkle-primary);
+  clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+  opacity: 0.7;
+  animation: sparkle 3.5s ease-in-out infinite;
+  z-index: -1;
+}
+
+.hero::before {
+  top: 22%;
+  left: 15%;
+  box-shadow:
+    8rem 1rem 0 -0.08rem var(--sparkle-secondary),
+    14rem 2rem 0 -0.08rem var(--sparkle-secondary),
+    25rem -1rem 0 -0.14rem var(--sparkle-primary),
+    36rem 4rem 0 -0.1rem var(--sparkle-secondary),
+    42rem 7rem 0 -0.12rem var(--sparkle-primary),
+    5rem 15rem 0 -0.14rem var(--sparkle-primary),
+    18rem 13rem 0 -0.16rem var(--sparkle-secondary),
+    31rem 17rem 0 -0.12rem var(--sparkle-primary),
+    49rem 14rem 0 -0.16rem var(--sparkle-secondary);
+}
+
+.hero::after {
+  top: 52%;
+  right: 14%;
+  width: 0.7rem;
+  height: 0.7rem;
+  animation-delay: 1.4s;
+  box-shadow:
+    -7rem -4rem 0 -0.12rem var(--sparkle-secondary),
+    -16rem -6rem 0 -0.15rem var(--sparkle-secondary),
+    -27rem -1rem 0 -0.18rem var(--sparkle-primary),
+    -31rem 5rem 0 -0.2rem var(--sparkle-primary),
+    -42rem 11rem 0 -0.14rem var(--sparkle-secondary),
+    -20rem 18rem 0 -0.18rem var(--sparkle-primary),
+    -4rem 16rem 0 -0.14rem var(--sparkle-secondary);
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(0.65) rotate(0deg); opacity: 0.25; }
+  50% { transform: scale(1.2) rotate(45deg); opacity: 0.85; }
 }
 
 .hero h1 {
@@ -222,15 +277,17 @@ body {
 
 .about .grid {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: minmax(280px, 400px) minmax(0, 1fr);
   gap: 2rem;
   align-items: start;
 }
 
-.about .grid img {
-  width: 1fr;
-  max-width: 300px;
-  height: 300px;
+.about .grid img,
+#about .grid img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -238,7 +295,13 @@ body {
   
 }
 
-.about img {
+.about img,
+#about img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
   border-radius: var(--radius);
 }
 
@@ -248,10 +311,11 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .photo-wrap {
-  width: 400px;
-  height: 620px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
 }
 
 @media (max-width: 900px) {
@@ -259,9 +323,18 @@ body {
     grid-template-columns: 1fr;
   }
   
-  .about .grid img {
-    max-width: 100%;
+  .about .grid img,
+  #about .grid img,
+  .about img,
+  #about img {
+    width: min(100%, 400px);
+    max-width: 400px;
     height: auto;
+    margin: 0 auto;
+  }
+
+  .photo-wrap {
+    max-width: 100%;
   }
 }
 
