@@ -125,6 +125,16 @@ const DATA = {
         toolsUsed: ["cd", "ai", "ps"],
         link: "https://www.behance.net/gallery/252191787/BUSQUE-Rota-Universitaria"
      },
+       {
+        id: 8,
+        category: "Identidade Visual",
+        title: "Clinica Casulo - Espaço de Desenvolvimento",
+        thumb: "casulothumb.png",
+        full: "casulothumb.png",
+        description: "Identidade visual para uma clinica de psicologia ocupacional para todas as idades.",
+        toolsUsed: ["cd", "ai", "ps"],
+        link: "https://www.behance.net/gallery/254801075/Clinica-Casulo-Psicologia-Ocupacional"
+     },
 
   ],
 
